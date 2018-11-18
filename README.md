@@ -5,7 +5,7 @@ The project is focused on a python script to poll and detect for BGP anomalies i
 
 ## How do I get started?
 
-```
+
 You can clone the project locally to start using it:
 ```
 git clone https://github.com/davidban77/bgp-defender 
