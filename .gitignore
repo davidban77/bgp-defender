@@ -105,3 +105,4 @@ venv.bak/
 
 # Custon files
 data/test_initial_data2.txt
+.vscode
