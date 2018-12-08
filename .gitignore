@@ -102,3 +102,7 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Custon files
+data/test_initial_data2.txt
+.vscode
