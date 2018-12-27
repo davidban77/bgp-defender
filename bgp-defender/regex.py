@@ -28,4 +28,4 @@ for line in table:
 
 #                                t = regex_dict.items(1)
 #                                print(t)
-#print(t)
+pprint(result_list)
