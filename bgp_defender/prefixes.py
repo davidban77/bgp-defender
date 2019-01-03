@@ -53,15 +53,22 @@ class Prefix:
     def asn(self, value):
         try:
             self._asn = int(value)
+
+            # Setting range based on 32-bit ASN numbering
+            if not 1 < self._asn <= 4294967295:
+                raise ValueError
+
+            # Determining if private ASN based on RFC 6996
+            if 64512 < self._asn <= 65534 or 4200000000 < self._asn <= 4294967294:
+                self.private_asn = True
+            else:
+                self.private_asn = False
+
         except ValueError:
             self._asn = None
             raise ValueError('Incorrect value for ASN: {}'.format(value))
-
-        # Determining is private ASN
-        if 64512 < self._asn <= 65534 or 4200000000 < self._asn <= 4294967294:
-            self.private_asn = True
-        else:
-            self.private_asn = False
+        except TypeError:
+            self._asn = None
 
     @staticmethod
     def is_ip(ip):
