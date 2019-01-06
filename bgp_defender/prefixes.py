@@ -26,7 +26,7 @@ class Prefix:
         return ', '.join(attrs)
 
     def __str__(self):
-        return '{}({})'.format(self.__class__.__name__, self._gatherAttrs())
+        return '({})'.format(self._gatherAttrs())
 
     def __repr__(self):
         return '{}({})'.format(self.__class__.__name__, self._gatherAttrs())
