@@ -52,6 +52,7 @@ def prefixlen_checker(prefix_len):
 
 
 def main():
+    ip_address = '192.168.0.1'
     if args.prefix_len:
         return(prefixlen_checker(args.prefix_len))
     elif args.subnet_mask:
