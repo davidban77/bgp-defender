@@ -103,6 +103,6 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-# Custon files
-data/test_initial_data2.txt
+# Custon files to be ignored, as those are test input information
+data/*     
 .vscode

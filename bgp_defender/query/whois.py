@@ -21,7 +21,8 @@ class WhoisConnector:
 
 if __name__ == "__main__":
                 # test Call
-    inputdata = '193.138.100.0'
+    # inputdata = '193.138.100.0'
+    inputdata = 'ASN27648'
     prefix = IPWhois(inputdata)
 
     result = prefix.lookup_whois()
