@@ -26,16 +26,16 @@ if __name__ == "__main__":
     prefix = IPWhois(inputdata)
 
     result = prefix.lookup_whois()
-    pprint(70*'*')
-    pprint(70*'*')
+    pprint(70 * '*')
+    pprint(70 * '*')
     pprint("this is the result of the {} whois".format(inputdata))
     pprint(result)
-    pprint(70*'*')
+    pprint(70 * '*')
 
     lookup_result = prefix.lookup_rdap()
 
-    pprint(70*'*')
-    pprint(70*'*')
+    pprint(70 * '*')
+    pprint(70 * '*')
     pprint("this is the result of the {} lookup_rdap".format(inputdata))
     pprint(lookup_result)
-    pprint(70*'*')
+    pprint(70 * '*')
