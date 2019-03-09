@@ -106,7 +106,8 @@ class RipeConnector:
 
         NOTE: The prefix has to be either an IP address (1.1.1.1) or a network (1.1.1.0/24) for the query to work
         """
-        _url = '{}/search?flags=no-filtering&query-string={}&flags=resource'.format(self.base_url, prefix)
+        _url = '{}/search?flags=no-filtering&query-string={}&flags=resource'.format(
+            self.base_url, prefix)
         _response = self.http_call('get', _url)
 
         if RipeConnector.error_checker(_response):
@@ -124,7 +125,8 @@ class RipeConnector:
 
         It expects the `route` object of the `asn` sent
         """
-        _url = '{}/search?flags=no-filtering&query-string=AS{}&inverse-attribute=origin'.format(self.base_url, asn)
+        _url = '{}/search?flags=no-filtering&query-string=AS{}&inverse-attribute=origin'.format(
+            self.base_url, asn)
         _response = self.http_call('get', _url)
 
         if RipeConnector.error_checker(_response):
@@ -142,7 +144,8 @@ class RipeConnector:
 
         It expects ...
         """
-        _url = '{}/search?flags=no-filtering&query-string={}&inverse-attribute=mnt-by'.format(self.base_url, mnt_by)
+        _url = '{}/search?flags=no-filtering&query-string={}&inverse-attribute=mnt-by'.format(
+            self.base_url, mnt_by)
         _response = self.http_call('get', _url)
 
         if RipeConnector.error_checker(_response):
@@ -157,8 +160,8 @@ if __name__ == "__main__":
     # test Call
     test_session = RipeConnector('http://rest.db.ripe.net')
     # prefix = test_session.get_prefix('193.0.0.0/21', 3333)
-    # prefix = test_session.search_prefix('185.10.117.0/24')
-    prefix = test_session.get_prefix('185.10.116.0/22', 199559)
+    prefix = test_session.search_prefix('193.138.100.0/24')
+    # prefix = test_session.get_prefix('185.10.116.0/22', 199559)
     if prefix:
         pprint(prefix)
         print('[INFO] Pues si lo encontro!')
