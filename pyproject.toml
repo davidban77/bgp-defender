@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "bgp-defender"
+version = "0.1.0"
+description = "BGP Must Defend"
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+netaddr = "^0.7.19"
+dnspython = "^1.16"
+ipwhois = "^1.1"
+requests = "^2.22"
+
+[tool.poetry.dev-dependencies]
+ipython = "^7.5"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
